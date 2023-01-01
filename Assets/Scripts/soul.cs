@@ -86,7 +86,19 @@ public class soul : MonoBehaviour
             Instantiate(select);
         }
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
-      if(sm.select_act == select_type)  switch (select_type)
+        if (select_type == selects.menu)
+        {
+            if (current == 0 && e)
+            {
+                StartCoroutine(ExampleCoroutine());
+
+            }
+            if (current == 1 && e)
+            {
+                Application.Quit();
+            }
+        }
+    else  if(sm.select_act == select_type)  switch (select_type)
         {
 
             case selects.menu:
