@@ -363,7 +363,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 2120771448, guid: aa8d5d98d5b8ed046998c7293bd5325d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.5555556, y: 0.5555556}
   m_AdaptiveModeThreshold: 0.5
@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 808831474}
   - component: {fileID: 808831475}
   - component: {fileID: 808831476}
+  - component: {fileID: 808831477}
   m_Layer: 0
   m_Name: scene
   m_TagString: Untagged
@@ -674,6 +675,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &808831477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808831473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b525ffc176856a94e8a9c733a2187a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 808831475}
 --- !u!1 &820043069
 GameObject:
   m_ObjectHideFlags: 0
@@ -5188,6 +5202,8 @@ MonoBehaviour:
 
     of someone
     like you'
-  - "but the question is do you still want\n to become [spanton giga]"
+  - 'but the question is do you still want
+
+    to become [spanton giga]'
   anim: {fileID: 808831475}
   sound_voise: {fileID: 2183858911148214555, guid: cb49a8498a7087b46900cc204654d321, type: 3}

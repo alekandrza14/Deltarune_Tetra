@@ -481,7 +481,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -489,6 +489,48 @@ TextureImporter:
       bones: []
       spriteID: 4def41f717a387945ad3fa9e72b18d03
       internalID: 1413437219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Cyber City_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 248
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effee8207a4d6ea4e8f1c7b36a6490a5
+      internalID: 940124225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Cyber City_19
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 248
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea17f03050ce3f4685e428b77df35b2
+      internalID: 35092255
       vertices: []
       indices: 
       edges: []
@@ -514,9 +556,11 @@ TextureImporter:
       PC Computer - Deltarune - Cyber City_10: 790817265
       PC Computer - Deltarune - Cyber City_15: -1276635087
       PC Computer - Deltarune - Cyber City_14: -1084076572
+      PC Computer - Deltarune - Cyber City_18: 940124225
       PC Computer - Deltarune - Cyber City_11: 268021461
       PC Computer - Deltarune - Cyber City_3: 173798043
       PC Computer - Deltarune - Cyber City_16: -1555489120
+      PC Computer - Deltarune - Cyber City_19: 35092255
       PC Computer - Deltarune - Cyber City_8: 282766509
       PC Computer - Deltarune - Cyber City_13: 519618580
       PC Computer - Deltarune - Cyber City_12: 1498510304

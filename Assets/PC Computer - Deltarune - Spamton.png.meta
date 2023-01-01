@@ -2875,7 +2875,7 @@ TextureImporter:
         width: 25
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2896,7 +2896,7 @@ TextureImporter:
         width: 25
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2917,7 +2917,7 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2938,7 +2938,7 @@ TextureImporter:
         width: 16
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2959,7 +2959,7 @@ TextureImporter:
         width: 17
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2980,7 +2980,7 @@ TextureImporter:
         width: 4
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2988,6 +2988,27 @@ TextureImporter:
       bones: []
       spriteID: c65b47724ca0c254b84d690876975b18
       internalID: 2118207312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Spamton_137
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 59
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06a7b6d7e2efc14b9b54907d47a0aed
+      internalID: -231334834
       vertices: []
       indices: 
       edges: []
@@ -3016,6 +3037,7 @@ TextureImporter:
       PC Computer - Deltarune - Spamton_6: -74953029
       PC Computer - Deltarune - Spamton_15: -1734560119
       PC Computer - Deltarune - Spamton_73: 44641894
+      PC Computer - Deltarune - Spamton_137: -231334834
       PC Computer - Deltarune - Spamton_134: -2093111298
       PC Computer - Deltarune - Spamton_114: -331101814
       PC Computer - Deltarune - Spamton_14: -1842461983
@@ -3037,8 +3059,8 @@ TextureImporter:
       PC Computer - Deltarune - Spamton_104: 1425593939
       PC Computer - Deltarune - Spamton_68: 174065975
       PC Computer - Deltarune - Spamton_60: 1262917663
-      PC Computer - Deltarune - Spamton_21: 1938197427
       PC Computer - Deltarune - Spamton_56: 270140537
+      PC Computer - Deltarune - Spamton_21: 1938197427
       PC Computer - Deltarune - Spamton_115: -759190547
       PC Computer - Deltarune - Spamton_120: -1148202157
       PC Computer - Deltarune - Spamton_89: 563107792
