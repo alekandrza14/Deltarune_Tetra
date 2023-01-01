@@ -138,6 +138,7 @@ public class dialog_menager : MonoBehaviour
             end = true;
             act = false;
             current_string = -1;
+            if (acting == acting.start_fight) SceneManager.LoadScene("Hyper_spamton_tutorial");
             if (!unsig) anim.Play("sig");
             gameObject.SetActive(false);
             return false;
