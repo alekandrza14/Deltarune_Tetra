@@ -49,20 +49,28 @@ public class acts : MonoBehaviour
     void InputKey()
     {
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
-        
-        
-            if (Input.GetKeyDown(KeyCode.RightArrow) && current < images.Length - 1 && !fight)
-            {
-                Instantiate(select);
-                current++;
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && current > 0 && !fight)
-            {
-                Instantiate(select);
-                current--;
-            }
-        
-          //  bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && current < images.Length - 1 && !fight && sm.current == -1)
+        {
+            Instantiate(select);
+            current++;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && current > 0 && !fight && sm.current == -1)
+        {
+            Instantiate(select);
+            current--;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) && current < images.Length - 1 && !fight && sm.current == -1)
+        {
+            Instantiate(select);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && current > 0 && !fight && sm.current == -1)
+        {
+            Instantiate(select);
+        }
+
+        //  bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
 
         if (e && !fight)
         {

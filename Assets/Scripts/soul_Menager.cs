@@ -13,9 +13,26 @@ public class soul_Menager : MonoBehaviour
     [SerializeField] dialog_menager ac;
     public string[] strings_dialog_1;
     public string[] strings_dialog_2;
+    [Multiline(4)] public string[] strings_dialog_3;
     public int current = -1;
     [SerializeField] public selects select_act;
     bool t;
+
+    public void Check()
+    {
+        ac.strings_dialog = strings_dialog_3;
+
+        ac.reset();
+        current = -1;
+        select_act = selects.none;
+        foreach (GameObject i in act)
+        {
+
+
+            i.SetActive(false);
+
+        }
+    }
     
     void InputKey()
     {
@@ -25,7 +42,7 @@ public class soul_Menager : MonoBehaviour
 
         int a = 0;
         
-        if (current >= 0 && e)
+        if (current >= 0)
         {
             ac.strings_dialog = strings_dialog_1;
             ac.reset();
@@ -73,6 +90,8 @@ public class soul_Menager : MonoBehaviour
         }
         if (m)
         {
+
+            Instantiate(select);
             current = -1;
             ac.strings_dialog = strings_dialog_2;
             ac.reset();

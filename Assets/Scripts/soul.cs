@@ -19,6 +19,7 @@ public class soul : MonoBehaviour
     [SerializeField] Animator anim_panel;
     [SerializeField] selects select_type;
     [SerializeField] soul_Menager sm;
+    [SerializeField] int scale = 0;
     int current;
     bool t;
     IEnumerator ExampleCoroutine2()
@@ -74,6 +75,16 @@ public class soul : MonoBehaviour
             current--;
             Instantiate(select);
         }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && current - scale < images.Length - 1)
+        {
+            current-= scale;
+            Instantiate(select);
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) && current + scale > 0)
+        {
+            current += scale;
+            Instantiate(select);
+        }
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
       if(sm.select_act == select_type)  switch (select_type)
         {
@@ -93,7 +104,7 @@ public class soul : MonoBehaviour
 
             case selects.enemyes:
 
-                if (current == 0 && e)
+                if (e)
                 {
                     StartCoroutine(ExampleCoroutine());
 
@@ -102,15 +113,29 @@ public class soul : MonoBehaviour
                 break;
             case selects.act:
 
+                    if (current == 0 && e)
+                    {
+                        sm.Check();
+
+                    }
+
+                    break;
+                case selects.item:
 
 
-                break;
-            case selects.item:
+
+                    break;
+                case selects.shild:
 
 
 
-                break;
-        }
+                    break;
+                case selects.spare:
+
+
+
+                    break;
+            }
         
 
     }
@@ -125,7 +150,11 @@ public class soul : MonoBehaviour
     {
         InputKey();
         int a =0;
-        if (current > images.Length-1)
+        if (current > images.Length - 1)
+        {
+            current = 0;
+        }
+        if (current < 0)
         {
             current = 0;
         }
