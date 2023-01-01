@@ -33,7 +33,22 @@ public class soul_Menager : MonoBehaviour
 
         }
     }
-    
+    public void Go()
+    {
+        ac.strings_dialog = strings_dialog_1;
+
+        ac.reset();
+        current = -1;
+        select_act = selects.none;
+        foreach (GameObject i in act)
+        {
+
+
+            i.SetActive(false);
+
+        }
+    }
+
     void InputKey()
     {
         

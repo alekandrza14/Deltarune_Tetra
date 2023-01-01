@@ -20,6 +20,8 @@ public class soul : MonoBehaviour
     [SerializeField] selects select_type;
     [SerializeField] soul_Menager sm;
     [SerializeField] int scale = 0;
+    [SerializeField] bool blok_updown;
+    [SerializeField] bool flip_leftright;
     int current;
     bool t;
     IEnumerator ExampleCoroutine2()
@@ -65,25 +67,47 @@ public class soul : MonoBehaviour
     }
     void InputKey()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && current < images.Length - 1)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && current < images.Length - 1 && !blok_updown)
         {
             current++;
             Instantiate(select);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && current > 0)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && current > 0 && !blok_updown)
         {
             current--;
             Instantiate(select);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && current - scale < images.Length - 1)
+        if (!flip_leftright)
         {
-            current-= scale;
-            Instantiate(select);
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && current - scale < images.Length - 1)
+            {
+                current -= scale;
+                Instantiate(select);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && current + scale > 0)
+        else
         {
-            current += scale;
-            Instantiate(select);
+            if (Input.GetKeyDown(KeyCode.RightArrow) && current - scale < images.Length - 1)
+            {
+                current -= scale;
+                Instantiate(select);
+            }
+        }
+        if (!flip_leftright)
+        {
+            if (Input.GetKeyDown(KeyCode.RightArrow) && current + scale > 0)
+            {
+                current += scale;
+                Instantiate(select);
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && current + scale > 0)
+            {
+                current += scale;
+                Instantiate(select);
+            }
         }
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
         if (select_type == selects.menu)
@@ -118,9 +142,9 @@ public class soul : MonoBehaviour
 
                 if (e)
                 {
-                    StartCoroutine(ExampleCoroutine());
-
-                }
+                        ac.end_act();
+                        sm.Go();
+                    }
 
                 break;
             case selects.act:
@@ -138,12 +162,22 @@ public class soul : MonoBehaviour
 
                     break;
                 case selects.shild:
-
+                    ac.end_act();
+                    sm.Go();
 
 
                     break;
                 case selects.spare:
-
+                    if (current == 0 && e)
+                    {
+                        ac.end_act();
+                        sm.Go();
+                    }
+                    if (current == 1 && e)
+                    {
+                        ac.end_act();
+                        sm.Go();
+                    }
 
 
                     break;

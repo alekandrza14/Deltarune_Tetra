@@ -23,8 +23,12 @@ public class acts : MonoBehaviour
     {
         anim.SetBool("fight", false);
     }
+    public void end_act()
+    {
+        StartCoroutine(ExampleCoroutine());
+    }
 
-    IEnumerator ExampleCoroutine()
+   public IEnumerator ExampleCoroutine()
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
