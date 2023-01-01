@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+public enum selects
+{
+    menu, enemyes, item, act, shild, spare, none
+}
 
 public class soul : MonoBehaviour
 {
@@ -10,8 +14,35 @@ public class soul : MonoBehaviour
     [SerializeField] GameObject select;
     [SerializeField] GameObject click;
     [SerializeField] Animator anim;
+    [SerializeField] acts ac;
+    [SerializeField] Animator anim2;
+    [SerializeField] Animator anim_panel;
+    [SerializeField] selects select_type;
+    [SerializeField] soul_Menager sm;
     int current;
     bool t;
+    IEnumerator ExampleCoroutine2()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+
+       ac.fight = true;
+
+        anim.SetBool("fight", ac.fight);
+
+        anim_panel.Play("hide");
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(7f);
+
+        //  SceneManager.LoadScene("game");
+        ac.fight = false;
+        anim.SetBool("fight", ac.fight);
+        anim_panel.Play("show");
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+
+    }
     IEnumerator ExampleCoroutine()
     {
         //Print the time of when the function is first called.
@@ -33,7 +64,7 @@ public class soul : MonoBehaviour
     }
     void InputKey()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && current < images.Length-1)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && current < images.Length - 1)
         {
             current++;
             Instantiate(select);
@@ -44,15 +75,41 @@ public class soul : MonoBehaviour
             Instantiate(select);
         }
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
-        
-        if (current == 0 && e)
+      if(sm.select_act == select_type)  switch (select_type)
         {
-            StartCoroutine(ExampleCoroutine());
-            
-        }
-        if (current == 1 && e)
-        {
-            Application.Quit();
+
+            case selects.menu:
+
+                if (current == 0 && e)
+                {
+                    StartCoroutine(ExampleCoroutine());
+
+                }
+                if (current == 1 && e)
+                {
+                    Application.Quit();
+                }
+                break;
+
+            case selects.enemyes:
+
+                if (current == 0 && e)
+                {
+                    StartCoroutine(ExampleCoroutine());
+
+                }
+
+                break;
+            case selects.act:
+
+
+
+                break;
+            case selects.item:
+
+
+
+                break;
         }
         
 
@@ -68,6 +125,10 @@ public class soul : MonoBehaviour
     {
         InputKey();
         int a =0;
+        if (current > images.Length-1)
+        {
+            current = 0;
+        }
         foreach (Image i in images)
         {
             

@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+public enum acting
+{
+    start_fight,none
+}
 
 public class dialog_menager : MonoBehaviour
 {
     [SerializeField] Text txt;
     [Multiline(4)]
-    [SerializeField] string[] strings_dialog;
+    [SerializeField] public string[] strings_dialog;
+
     [SerializeField] Animator anim;
+    [SerializeField] bool unsig;
+    [SerializeField] acting acting;
     string log;
     int a;
     float tic;
@@ -18,82 +25,108 @@ public class dialog_menager : MonoBehaviour
     bool act;
     bool end;
     int z;
+    public void reset()
+    {
+        a = 0;
+
+        log = "";
+    }
     void InputKey()
     {
 
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return); 
         bool m = Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
-        
 
-        if (!act && e)
+        if (acting == acting.start_fight)
         {
-            act = !act;
-            log = "";
-            
-        }
-        if (e)
-        {
-            z++;
-        }
-        if (z >= 2)
-        {
-            
-            if (current_string < strings_dialog.Length - 1)
+
+
+            if (!act && e)
             {
-                // anim.Play("cutscene_end");
-
-                current_string++;
-                act = false;
-                a = 0;
-
+                act = !act;
+                log = "";
                 z = 0;
             }
-            else if (current_string == strings_dialog.Length - 1)
+            if (e)
             {
-                // anim.Play("cutscene_end");
+                z++;
+            }
+            if (z >= 2)
+            {
 
-                Debug.Log("end");
-                end = true;
-                act = false;
-                current_string = -1;
-                anim.Play("sig");
-                gameObject.SetActive(false);
-                if (end)
+                if (current_string < strings_dialog.Length - 1)
                 {
-                    SceneManager.LoadScene("Hyper_spamton_tutorial");
-                }
-                z = 0;
-            }
-            else if (current_string > strings_dialog.Length - 1)
-            {
-                Debug.Log("end");
-                end = true;
-                act = false;
-                current_string = -1;
-                anim.Play("sig");
-                gameObject.SetActive(false);
-                if (end)
-                {
-                    SceneManager.LoadScene("Hyper_spamton_tutorial");
-                }
-                z = 0;
+                    // anim.Play("cutscene_end");
 
+                    current_string++;
+                    act = false;
+                    a = 0;
+
+                    z = 0;
+                }
+                else if (current_string == strings_dialog.Length - 1)
+                {
+                    // anim.Play("cutscene_end");
+
+                    Debug.Log("end");
+                    end = true;
+                    act = false;
+                    current_string = -1;
+                    if (!unsig) anim.Play("sig");
+                    gameObject.SetActive(false);
+                    if (end)
+                    {
+                        SceneManager.LoadScene("Hyper_spamton_tutorial");
+                    }
+                    z = 0;
+                }
+                else if (current_string > strings_dialog.Length - 1)
+                {
+                    Debug.Log("end");
+                    end = true;
+                    act = false;
+                    current_string = -1;
+                    if (!unsig) anim.Play("sig");
+                    gameObject.SetActive(false);
+                    if (end)
+                    {
+                        SceneManager.LoadScene("Hyper_spamton_tutorial");
+                    }
+                    z = 0;
+
+                }
             }
-            
+
+
+
+            if (true) if (act)
+                {
+                    actor();
+                    // StartCoroutine(DialogCoroutine());
+                }
+            if (m)
+            {
+                log = strings_dialog[current_string];
+                //  current_string++;
+                a = strings_dialog[current_string].Length;
+                act = false;
+                txt.text = log;
+            }
         }
-        
-        if(true)if (act)
+        else if(acting == acting.none)
         {
-            actor();
-           // StartCoroutine(DialogCoroutine());
-        }
-        if (m)
-        {
-            log = strings_dialog[current_string];
-            //  current_string++;
-            a = strings_dialog[current_string].Length;
-            act = false;
             txt.text = log;
+            tic += Time.deltaTime;
+            if (tic > 0.1 && !end)
+            {
+
+                if (strings_dialog[0] .Length > a) log += strings_dialog[0][a];
+                Instantiate(sound_voise);
+                a++;
+
+                if (!unsig) anim.Play("a");
+                tic = 0;
+            }
         }
 
     }
@@ -105,7 +138,7 @@ public class dialog_menager : MonoBehaviour
             end = true;
             act = false;
             current_string = -1;
-            anim.Play("sig");
+            if (!unsig) anim.Play("sig");
             gameObject.SetActive(false);
             return false;
         }
@@ -125,12 +158,15 @@ public class dialog_menager : MonoBehaviour
         tic += Time.deltaTime;
         if (tic > 0.1 && !end)
         {
-            
-         if(ifer()&& !end)log += strings_dialog[current_string][a];
-            Instantiate(sound_voise);
+
+            if (ifer() && !end)
+            {
+                log += strings_dialog[current_string][a];
+                Instantiate(sound_voise);
+            }
             a++;
 
-            anim.Play("a");
+            if (!unsig) anim.Play("a");
             tic = 0;
         }
 
