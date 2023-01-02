@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum selects
 {
-    menu, enemyes, item, act, shild, spare, none
+    menu, enemyes, item, act, shild, spare, none, attack
 }
 
 public class soul : MonoBehaviour
@@ -16,13 +16,16 @@ public class soul : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] acts ac;
     [SerializeField] Animator anim2;
+    [SerializeField] Animator anim3;
     [SerializeField] Animator anim_panel;
     [SerializeField] selects select_type;
     [SerializeField] soul_Menager sm;
     [SerializeField] int scale = 0;
     [SerializeField] bool blok_updown;
     [SerializeField] bool flip_leftright;
+    [SerializeField] Getdistance get_dist;
     int current;
+    float tic = 0;
     bool t;
     IEnumerator ExampleCoroutine2()
     {
@@ -38,6 +41,7 @@ public class soul : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
 
+        anim2.Play("Kriss_unshield");
         //  SceneManager.LoadScene("game");
         ac.fight = false;
         anim.SetBool("fight", ac.fight);
@@ -138,16 +142,41 @@ public class soul : MonoBehaviour
                 }
                 break;
 
-            case selects.enemyes:
+                case selects.enemyes:
 
-                if (e)
-                {
-                        ac.end_act();
-                        sm.Go();
+                    if (e)
+                    {
+                      //  ac.end_act();
+                        sm.Do();
+                       // sm.select_act = selects.attack;
                     }
 
-                break;
-            case selects.act:
+                    break;
+                case selects.attack:
+                    anim3.Play("hit_bar_left_attack", 1);
+                    if (t) { tic += Time.deltaTime;  }
+                    if (!t) { anim3.Play("none", 0);}
+                    if (e)
+                    {
+                        sm.hit(get_dist);
+                        if (true)
+                        {
+
+
+                            anim3.Play("hit_bar_end", 0);
+                            anim2.Play("Kriss_attack");
+                            ac.end_act_v2();
+
+                            if (true) t = true;
+
+
+                            Debug.Log(get_dist.gist());
+                        }
+                        
+                    }
+                    if (tic >= 0.5) { sm.Go(); t = false; tic = 0;  }
+                    break;
+                case selects.act:
 
                     if (current == 0 && e)
                     {
@@ -162,6 +191,7 @@ public class soul : MonoBehaviour
 
                     break;
                 case selects.shild:
+                    anim2.Play("Kriss_shield");
                     ac.end_act();
                     sm.Go();
 
@@ -170,8 +200,8 @@ public class soul : MonoBehaviour
                 case selects.spare:
                     if (current == 0 && e)
                     {
-                        ac.end_act();
                         sm.Go();
+
                     }
                     if (current == 1 && e)
                     {

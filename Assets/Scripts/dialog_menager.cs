@@ -24,6 +24,7 @@ public class dialog_menager : MonoBehaviour
     [SerializeField] GameObject sound_voise;
     bool act;
     bool end;
+    float speed;
     int z;
     public void reset()
     {
@@ -116,12 +117,15 @@ public class dialog_menager : MonoBehaviour
         else if(acting == acting.none)
         {
             txt.text = log;
-            tic += Time.deltaTime;
+            tic += 1f /(30f / speed);
             if (tic > 0.1 && !end)
             {
 
-                if (strings_dialog[0] .Length > a) log += strings_dialog[0][a];
-                Instantiate(sound_voise);
+                if (strings_dialog[0].Length > a)
+                {
+                    log += strings_dialog[0][a];
+                    Instantiate(sound_voise);
+                }
                 a++;
 
                 if (!unsig) anim.Play("a");
@@ -156,7 +160,7 @@ public class dialog_menager : MonoBehaviour
     void actor()
     {
         txt.text = log;
-        tic += Time.deltaTime;
+        tic += 1f / (30f/ speed);
         if (tic > 0.1 && !end)
         {
 
@@ -194,7 +198,8 @@ public class dialog_menager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+       speed = Settings.Player.dialog_speed;
     }
 
     // Update is called once per frame

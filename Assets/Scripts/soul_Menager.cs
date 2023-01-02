@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class soul_Menager : MonoBehaviour
 {
+   // static public int damege = 1;
     [SerializeField] Image[] images;
     [SerializeField] GameObject select;
     [SerializeField] GameObject click;
@@ -33,6 +35,13 @@ public class soul_Menager : MonoBehaviour
 
         }
     }
+    public void hit(Getdistance i)
+    {
+        int d = (int)(i.gist() * 2);
+        int da = (1000 - d);
+        Debug.Log(da);
+        if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
+    }
     public void Go()
     {
         ac.strings_dialog = strings_dialog_1;
@@ -45,6 +54,28 @@ public class soul_Menager : MonoBehaviour
 
 
             i.SetActive(false);
+
+        }
+    }
+    public void Do()
+    {
+        ac.strings_dialog = strings_dialog_1;
+        int a = 0;
+        ac.reset();
+        current = 5;
+        select_act = selects.attack;
+        foreach (GameObject i in act)
+        {
+
+            if (a == current)
+            {
+                i.SetActive(true);
+            }
+            else
+            {
+                i.SetActive(false);
+            }
+            a++;
 
         }
     }
@@ -95,6 +126,9 @@ public class soul_Menager : MonoBehaviour
                     break;
                 case 4:
                     select_act = selects.shild;
+                    break;
+                case 5:
+                    select_act = selects.attack;
                     break;
             }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5039932748539087623}
   - component: {fileID: 8551653534000081832}
   - component: {fileID: 1506039724739414136}
+  - component: {fileID: 6950967488907339766}
   m_Layer: 0
   m_Name: click
   m_TagString: Untagged
@@ -138,3 +139,15 @@ AudioDistortionFilter:
   m_GameObject: {fileID: 8591221904551132221}
   m_Enabled: 1
   m_DistortionLevel: 0.5
+--- !u!114 &6950967488907339766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591221904551132221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f5bab5a34410640ab580125cbde0a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

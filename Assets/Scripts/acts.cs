@@ -27,8 +27,34 @@ public class acts : MonoBehaviour
     {
         StartCoroutine(ExampleCoroutine());
     }
+    public void end_act_v2()
+    {
+        StartCoroutine(ExampleCoroutine2());
+    }
 
-   public IEnumerator ExampleCoroutine()
+    public IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+        yield return new WaitForSeconds(0.5f);
+        sm.Go();
+        fight = true;
+
+        anim.SetBool("fight", fight);
+
+        anim_panel.Play("hide");
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(7f);
+
+        //  SceneManager.LoadScene("game");
+        fight = false;
+        anim.SetBool("fight", fight);
+        anim_panel.Play("show");
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+
+    }
+    public IEnumerator ExampleCoroutine2()
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
@@ -42,13 +68,13 @@ public class acts : MonoBehaviour
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
 
-      //  SceneManager.LoadScene("game");
+        //  SceneManager.LoadScene("game");
         fight = false;
         anim.SetBool("fight", fight);
         anim_panel.Play("show");
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        
+
     }
     void InputKey()
     {

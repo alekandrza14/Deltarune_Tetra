@@ -13,7 +13,22 @@ public class RaymarchCam : SceneViewFilter
     [SerializeField]
     [Header("Global Settings")]
     private Shader _shader;
+    public bool invert;
     List<ComputeBuffer> buffersToDispose;
+
+    void Awake()
+    {
+#if UNITY_EDITOR
+        Camera.main.renderingPath = RenderingPath.DeferredShading;
+#elif UNITY_ANDROID
+        Camera.main.renderingPath = RenderingPath.DeferredShading;
+#elif UNITY_WIN
+        Camera.main.renderingPath = RenderingPath.DeferredShading;
+#endif
+
+        Camera.main.renderingPath = RenderingPath.DeferredShading;
+
+    }
 
     public Material _raymarchMaterial
     {
@@ -43,7 +58,7 @@ public class RaymarchCam : SceneViewFilter
         }
     }
     private Camera _cam;
-    private float _forceFieldRad;
+    private float _forceFieldRad ;
 
 
     // all the variables send to the shader Bools are converted to ints because bools are not supported in shaders
