@@ -24,10 +24,53 @@ public class soul : MonoBehaviour
     [SerializeField] bool blok_updown;
     [SerializeField] bool flip_leftright;
     [SerializeField] Getdistance get_dist;
+    [SerializeField] Scrollbar tpbar;
+    [SerializeField] Text txt;
+   public static int tp =0;
     int current;
     float tic = 0;
     bool t;
-    IEnumerator ExampleCoroutine2()
+    public void attacktpup()
+    {
+        
+        if (Hyper_Spamton_manager.damege >= 900)
+        {
+
+
+            if (tp < 100 - 5) tp += 1; else { tp = 100; }
+            if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+        }
+        if (Hyper_Spamton_manager.damege >= 400)
+        {
+
+
+            if (tp < 100 - 1) tp += 1; else { tp = 100; }
+            if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+        }
+        if (Hyper_Spamton_manager.damege >= 300)
+        {
+
+
+            if (tp < 100 - 1) tp += 1; else { tp = 100; }
+            if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+        }
+        if (Hyper_Spamton_manager.damege >= 200)
+        {
+
+
+            if (tp < 100 - 1) tp += 1; else { tp = 100; }
+            if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+        }
+        if (Hyper_Spamton_manager.damege >= 100)
+        {
+
+
+            if (tp < 100 - 1) tp += 1; else { tp = 100; }
+            if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+        }
+        tpbar.size = (float)(tp) / 100;
+    }
+     IEnumerator ExampleCoroutine2()
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
@@ -153,23 +196,24 @@ public class soul : MonoBehaviour
 
                     break;
                 case selects.attack:
-                    anim3.Play("hit_bar_left_attack", 1);
+                    anim3.Play("hit_bar_left_attack", 0);
                     if (t) { tic += Time.deltaTime;  }
-                    if (!t) { anim3.Play("none", 0);}
+                    if (true) if (!t) { anim3.Play("none", 1);}
                     if (e)
                     {
                         sm.hit(get_dist);
                         if (true)
                         {
+                            if (true) t = true;
 
-
-                            anim3.Play("hit_bar_end", 0);
+                            anim3.Play("hit_bar_end", 1);
                             anim2.Play("Kriss_attack");
                             ac.end_act_v2();
 
                             if (true) t = true;
 
 
+                         
                             Debug.Log(get_dist.gist());
                         }
                         
@@ -191,6 +235,9 @@ public class soul : MonoBehaviour
 
                     break;
                 case selects.shild:
+                  if(tp < 100-16)  tp += 16; else { tp = 100; }
+                  if(tp != 100)  txt.text = tp.ToString(); else { txt.text = "max"; }
+                    tpbar.size = (float)(tp) / 100;
                     anim2.Play("Kriss_shield");
                     ac.end_act();
                     sm.Go();

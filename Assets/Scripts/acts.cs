@@ -14,6 +14,7 @@ public class acts : MonoBehaviour
     [SerializeField] Animator anim;
     [SerializeField] Animator anim_panel;
     [SerializeField] soul_Menager sm;
+    [SerializeField] soul tp;
     [SerializeField] public bool fight = false;
     [SerializeField] bool acting = false;
     int current;
@@ -39,7 +40,7 @@ public class acts : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         sm.Go();
         fight = true;
-
+        tp.attacktpup();
         anim.SetBool("fight", fight);
 
         anim_panel.Play("hide");
@@ -62,6 +63,7 @@ public class acts : MonoBehaviour
 
         fight = true;
 
+        tp.attacktpup();
         anim.SetBool("fight", fight);
 
         anim_panel.Play("hide");

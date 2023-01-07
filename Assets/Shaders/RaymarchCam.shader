@@ -5,7 +5,7 @@ Shader "Raymarch/RaymarchCam"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _distance("distance", Range(0,1000)) = 1 
+        _distance("distance", Range(0,200)) = 1 
     }
     SubShader
     {

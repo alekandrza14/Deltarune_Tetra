@@ -8,6 +8,7 @@ public class GetDamege : MonoBehaviour
 
     void Update()
     {
-        if (GetComponent<TextMeshProUGUI>()) GetComponent<TextMeshProUGUI>().text = Hyper_Spamton_manager.damege.ToString();
+       if(Hyper_Spamton_manager.damege > 0) if (GetComponent<TextMeshProUGUI>()) GetComponent<TextMeshProUGUI>().text = Hyper_Spamton_manager.damege.ToString(); 
+            else { if (GetComponent<TextMeshProUGUI>()) GetComponent<TextMeshProUGUI>().text = "miss"; }
     }
 }
