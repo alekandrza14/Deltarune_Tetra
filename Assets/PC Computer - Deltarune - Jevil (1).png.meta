@@ -1,0 +1,1410 @@
+fileFormatVersion: 2
+guid: 8ac26e6b1ffcc7f4393db319a1073b07
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 606
+        width: 42
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5335981, y: 0.028782655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39362f42854774a4dbb5bd6cbee6603f
+      internalID: 957325485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 606
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8097269bda7a0ad4bab35edd196f895b
+      internalID: 1388958643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 606
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52316e8f3927570488517b23317c3be2
+      internalID: -2008913975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_3
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 606
+        width: 42
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e029a598cb5790945b69e010e2640f2f
+      internalID: 1581872741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 606
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e087cee6a9e97d74a81927b1f1ed2f63
+      internalID: 592511521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 606
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd5ceb37e2b47d4f9d39c0ea33d54fa
+      internalID: 738059472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 610
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254876020608d78419418ac5d39bc95a
+      internalID: 1359790218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_7
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 606
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1e95f812e95ed42b66a671687a42a3
+      internalID: 2060677784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 611
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684daf67ac87b6c49a68d1d1b7db0a33
+      internalID: 2038855426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 541
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520619cd72e92ee44831748f55fc629b
+      internalID: -347071273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_10
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 541
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98397c4af05187a4aa8b91ffa5105369
+      internalID: -186717214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_11
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 547
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c75e76796481e24ab32206301ce1276
+      internalID: 633753818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_12
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 546
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5135f4feae1efee40aa83641cf8c57cd
+      internalID: 1860265711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_13
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 541
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d828126b12bb0c498fc7d79b9279d3e
+      internalID: 798186453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_14
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 541
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d93efd2b5492844900630c94094b17
+      internalID: 1815531570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_15
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 547
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab37e37925228f47a9fa9e334849260
+      internalID: -19939266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_16
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 546
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb37d854dc10bf6459e101cc06caf05c
+      internalID: 282510135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 476
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555a26710b2e23a4b913b12ca8eec66a
+      internalID: 333488372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_18
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 476
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95da7a416e80690459198096f4eb17c4
+      internalID: 744605221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_19
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 482
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d7fe8b3b7e04b47aec2e8b34e98731
+      internalID: -1820858988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_20
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 482
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af07490565e13594d97ec38102262ad4
+      internalID: -155282219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_21
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 476
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb91e393a5d3d94682baaf20d25f17e
+      internalID: -1213107081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_22
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 476
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8898ee0024b9545aa1957175a3469e
+      internalID: 1538885532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 482
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a213d5b7d18aa4eb788e7a38b5d66c
+      internalID: -137928917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 481
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40011caf93601f43ab517117a8f0944
+      internalID: -1904504802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_25
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 418
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a824921c1542e4a8f294d34a9f9c5b
+      internalID: 1391141811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_26
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 419
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab0ec508d1e1f1428af5206fcb72849
+      internalID: 2002379071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_27
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 418
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0551340b9b05ff4799b9a2280cf81cc
+      internalID: 515774065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_28
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 419
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3461da013bdfd0d4d9c2477ff3f4883e
+      internalID: -326123078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_29
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 345
+        width: 44
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a64c54c33fabdc459570365775131c3
+      internalID: 19247637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_30
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 345
+        width: 44
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a698e7ab94eaa4b8378ff76b02c6a0
+      internalID: 1765452166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_31
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 345
+        width: 46
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc30f07b95e0ad418a3922bd4219dd0
+      internalID: 1720929936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_32
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 337
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e54ce52a6c4624bad24082cf65a6b5
+      internalID: 682986881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_33
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 357
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48421f9739c7b5489e5ae8cbc679f8a
+      internalID: -2081922112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 295
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dd4af3fee15a24a9b5129bb2f21f33
+      internalID: 825981693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_35
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 295
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f095b029bbb69449bddc36f9aba0df
+      internalID: -1404458806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_36
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 295
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807464493a559d34a9a1dfe0fb349832
+      internalID: 1741441646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_37
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 295
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f62d86e3caad343b21e4952da7e3fe
+      internalID: 1655522362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_38
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 294
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbb42dd538aeb249b6e9337df305cee
+      internalID: 158448653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_39
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 294
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636e32d90c5ba0e46b775de0f7210d2e
+      internalID: -937393937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_40
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 294
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84855ce18ce9c434b9554a08ef028778
+      internalID: -837477823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_41
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 294
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d546b21a8a14caa43a6e7cb7a001b654
+      internalID: 1474096748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_42
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 25
+        width: 700
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dda8cae54af29141880fa510f5c2258
+      internalID: 704498156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_43
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 258
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11dc272ac0530434aa297ca1f94c9013
+      internalID: -1249071404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_44
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 260
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1b487db58e58f429c41eca4f878cc1
+      internalID: -1688557795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_45
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 274
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebc7d703f75ef74db435cf344070368
+      internalID: -1644966207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_46
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 266
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7bde556bf6aab540996ee12501f1dbd
+      internalID: 193593639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_47
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 258
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3429b123a488d4f499d385cfcce872e6
+      internalID: 1906307164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_48
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 225
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541395fc95082f542b627ae853ee8ef9
+      internalID: -1001858697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_49
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 231
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c8ae0b933d784439fe642533a77c74
+      internalID: 916341115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_50
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 227
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a7880acf350ab489deafdcc7450cac
+      internalID: 263491907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_51
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 227
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16df53727f1706847a2a7bc1f1391327
+      internalID: -1755414418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_52
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 227
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0fea1a325dfa6e459a89a0067c91f8b
+      internalID: -21170831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_53
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 187
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d712b88833aa146bd61054d831bca1
+      internalID: 1751049790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_54
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 167
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fef7937c004dd4185a209e50cbb07f
+      internalID: 190227591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_55
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 132
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe4fe19fa6a89049b0043c82a5d668d
+      internalID: 820355098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_56
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 131
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b8b36e0d97ca94bb2f7efb13e80bb9
+      internalID: -1552474427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Deltarune - Jevil (1)_57
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 131
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce9bc9ff5cd45e74697d4556d8532069
+      internalID: -1975504550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Deltarune - Jevil (1)_57: -1975504550
+      PC Computer - Deltarune - Jevil (1)_53: 1751049790
+      PC Computer - Deltarune - Jevil (1)_13: 798186453
+      PC Computer - Deltarune - Jevil (1)_14: 1815531570
+      PC Computer - Deltarune - Jevil (1)_54: 190227591
+      PC Computer - Deltarune - Jevil (1)_20: -155282219
+      PC Computer - Deltarune - Jevil (1)_45: -1644966207
+      PC Computer - Deltarune - Jevil (1)_39: -937393937
+      PC Computer - Deltarune - Jevil (1)_34: 825981693
+      PC Computer - Deltarune - Jevil (1)_7: 2060677784
+      PC Computer - Deltarune - Jevil (1)_4: 592511521
+      PC Computer - Deltarune - Jevil (1)_56: -1552474427
+      PC Computer - Deltarune - Jevil (1)_21: -1213107081
+      PC Computer - Deltarune - Jevil (1)_19: -1820858988
+      PC Computer - Deltarune - Jevil (1)_38: 158448653
+      PC Computer - Deltarune - Jevil (1)_41: 1474096748
+      PC Computer - Deltarune - Jevil (1)_2: -2008913975
+      PC Computer - Deltarune - Jevil (1)_44: -1688557795
+      PC Computer - Deltarune - Jevil (1)_28: -326123078
+      PC Computer - Deltarune - Jevil (1)_24: -1904504802
+      PC Computer - Deltarune - Jevil (1)_15: -19939266
+      PC Computer - Deltarune - Jevil (1)_29: 19247637
+      PC Computer - Deltarune - Jevil (1)_31: 1720929936
+      PC Computer - Deltarune - Jevil (1)_16: 282510135
+      PC Computer - Deltarune - Jevil (1)_52: -21170831
+      PC Computer - Deltarune - Jevil (1)_18: 744605221
+      PC Computer - Deltarune - Jevil (1)_8: 2038855426
+      PC Computer - Deltarune - Jevil (1)_22: 1538885532
+      PC Computer - Deltarune - Jevil (1)_33: -2081922112
+      PC Computer - Deltarune - Jevil (1)_10: -186717214
+      PC Computer - Deltarune - Jevil (1)_37: 1655522362
+      PC Computer - Deltarune - Jevil (1)_1: 1388958643
+      PC Computer - Deltarune - Jevil (1)_30: 1765452166
+      PC Computer - Deltarune - Jevil (1)_55: 820355098
+      PC Computer - Deltarune - Jevil (1)_46: 193593639
+      PC Computer - Deltarune - Jevil (1)_48: -1001858697
+      PC Computer - Deltarune - Jevil (1)_12: 1860265711
+      PC Computer - Deltarune - Jevil (1)_23: -137928917
+      PC Computer - Deltarune - Jevil (1)_47: 1906307164
+      PC Computer - Deltarune - Jevil (1)_40: -837477823
+      PC Computer - Deltarune - Jevil (1)_0: 957325485
+      PC Computer - Deltarune - Jevil (1)_35: -1404458806
+      PC Computer - Deltarune - Jevil (1)_42: 704498156
+      PC Computer - Deltarune - Jevil (1)_43: -1249071404
+      PC Computer - Deltarune - Jevil (1)_51: -1755414418
+      PC Computer - Deltarune - Jevil (1)_3: 1581872741
+      PC Computer - Deltarune - Jevil (1)_5: 738059472
+      PC Computer - Deltarune - Jevil (1)_25: 1391141811
+      PC Computer - Deltarune - Jevil (1)_32: 682986881
+      PC Computer - Deltarune - Jevil (1)_27: 515774065
+      PC Computer - Deltarune - Jevil (1)_6: 1359790218
+      PC Computer - Deltarune - Jevil (1)_49: 916341115
+      PC Computer - Deltarune - Jevil (1)_17: 333488372
+      PC Computer - Deltarune - Jevil (1)_26: 2002379071
+      PC Computer - Deltarune - Jevil (1)_36: 1741441646
+      PC Computer - Deltarune - Jevil (1)_50: 263491907
+      PC Computer - Deltarune - Jevil (1)_9: -347071273
+      PC Computer - Deltarune - Jevil (1)_11: 633753818
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

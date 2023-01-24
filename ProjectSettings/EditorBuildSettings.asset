@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hyper_spamton_tutorial.unity
     guid: 8492092be7f345543bf169808759191d
+  - enabled: 1
+    path: Assets/Scenes/GameOwer.unity
+    guid: 7838eca5b4e9c15448ce98a1bb1f5df0
   m_configObjects: {}

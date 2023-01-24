@@ -13,6 +13,9 @@ public class acts : MonoBehaviour
     [SerializeField] GameObject click;
     [SerializeField] Animator anim;
     [SerializeField] Animator anim_panel;
+    [SerializeField] Animator attacks_spamton;
+    [SerializeField] string[] attacks_spamton_names;
+    [SerializeField] int current_attack_spamton;
     [SerializeField] soul_Menager sm;
     [SerializeField] soul tp;
     [SerializeField] public bool fight = false;
@@ -42,11 +45,12 @@ public class acts : MonoBehaviour
         fight = true;
         tp.attacktpup();
         anim.SetBool("fight", fight);
-
+        attacks_spamton.Play(attacks_spamton_names[current_attack_spamton],1);
         anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
 
+        current_attack_spamton++;
         //  SceneManager.LoadScene("game");
         fight = false;
         anim.SetBool("fight", fight);
@@ -66,10 +70,11 @@ public class acts : MonoBehaviour
         tp.attacktpup();
         anim.SetBool("fight", fight);
 
+        attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1);
         anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
-
+        current_attack_spamton++;
         //  SceneManager.LoadScene("game");
         fight = false;
         anim.SetBool("fight", fight);
