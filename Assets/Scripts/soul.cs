@@ -114,19 +114,23 @@ public class soul : MonoBehaviour
     }
     void InputKey()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) && current < images.Length - 1 && !blok_updown)
+        bool s = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S);
+        bool w = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
+        bool a = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A);
+        bool d = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D);
+        if (s && current < images.Length - 1 && !blok_updown)
         {
             current++;
             Instantiate(select);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && current > 0 && !blok_updown)
+        if (w && current > 0 && !blok_updown)
         {
             current--;
             Instantiate(select);
         }
         if (!flip_leftright)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && current - scale < images.Length - 1)
+            if (a && current - scale < images.Length - 1)
             {
                 current -= scale;
                 Instantiate(select);
@@ -134,7 +138,7 @@ public class soul : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && current - scale < images.Length - 1)
+            if (d && current - scale < images.Length - 1)
             {
                 current -= scale;
                 Instantiate(select);
@@ -142,7 +146,7 @@ public class soul : MonoBehaviour
         }
         if (!flip_leftright)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && current + scale > 0)
+            if (d && current + scale > 0)
             {
                 current += scale;
                 Instantiate(select);
@@ -150,7 +154,7 @@ public class soul : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && current + scale > 0)
+            if (a && current + scale > 0)
             {
                 current += scale;
                 Instantiate(select);
@@ -231,9 +235,15 @@ public class soul : MonoBehaviour
                     break;
                 case selects.item:
 
+                    if (e)
+                    {
+                        Settings.Player.Curent_Hero_healf = Settings.Player.Hero_healf;
+                        ac.end_act();
+                        sm.Go();
+                    }
 
 
-                    break;
+                        break;
                 case selects.shild:
                   if(tp < 100-16)  tp += 16; else { tp = 100; }
                   if(tp != 100)  txt.text = tp.ToString(); else { txt.text = "max"; }

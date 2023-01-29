@@ -45,7 +45,7 @@ public class acts : MonoBehaviour
         fight = true;
         tp.attacktpup();
         anim.SetBool("fight", fight);
-        attacks_spamton.Play(attacks_spamton_names[current_attack_spamton],1);
+        if (attacks_spamton_names.Length > current_attack_spamton) { attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1); }
         anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
@@ -70,7 +70,7 @@ public class acts : MonoBehaviour
         tp.attacktpup();
         anim.SetBool("fight", fight);
 
-        attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1);
+        if (attacks_spamton_names.Length > current_attack_spamton) { attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1); }
         anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
@@ -86,23 +86,26 @@ public class acts : MonoBehaviour
     void InputKey()
     {
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
+        bool s = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S);
+        bool w = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
+        bool a = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A);
+        bool d = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D);
 
-
-        if (Input.GetKeyDown(KeyCode.RightArrow) && current < images.Length - 1 && !fight && sm.current == -1)
+        if (d && current < images.Length - 1 && !fight && sm.current == -1)
         {
             Instantiate(select);
             current++;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && current > 0 && !fight && sm.current == -1)
+        if (a && current > 0 && !fight && sm.current == -1)
         {
             Instantiate(select);
             current--;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && current < images.Length - 1 && !fight && sm.current == -1)
+        if (d && current < images.Length - 1 && !fight && sm.current == -1)
         {
             Instantiate(select);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && current > 0 && !fight && sm.current == -1)
+        if (a && current > 0 && !fight && sm.current == -1)
         {
             Instantiate(select);
         }
