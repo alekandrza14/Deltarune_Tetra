@@ -41,6 +41,18 @@ public class soul_Menager : MonoBehaviour
         int da = (1000 - d);
         Debug.Log(da);
         if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
+        Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
+        Debug.Log(Hyper_Spamton_manager.current_hp_hs);
+    }
+    public void hit2(Getdistance i)
+    {
+        int d = (int)(i.gist() * 12);
+        int da = (6000 - d);
+        Debug.Log(da);
+        if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
+        Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
+
+        Debug.Log(Hyper_Spamton_manager.current_hp_hs);
     }
     public void Go()
     {
@@ -64,6 +76,28 @@ public class soul_Menager : MonoBehaviour
         ac.reset();
         current = 5;
         select_act = selects.attack;
+        foreach (GameObject i in act)
+        {
+
+            if (a == current)
+            {
+                i.SetActive(true);
+            }
+            else
+            {
+                i.SetActive(false);
+            }
+            a++;
+
+        }
+    }
+    public void Do1()
+    {
+        ac.strings_dialog = strings_dialog_1;
+        int a = 0;
+        ac.reset();
+        current = 6;
+        select_act = selects.supernova;
         foreach (GameObject i in act)
         {
 

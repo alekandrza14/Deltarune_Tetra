@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum selects
 {
-    menu, enemyes, item, act, shild, spare, none, attack
+    menu, enemyes, item, act, shild, spare, none, attack, supernova
 }
 
 public class soul : MonoBehaviour
@@ -114,6 +114,10 @@ public class soul : MonoBehaviour
     }
     void InputKey()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log(Hyper_Spamton_manager.current_hp_hs);
+        }
         bool s = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S);
         bool w = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
         bool a = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A);
@@ -224,12 +228,68 @@ public class soul : MonoBehaviour
                     }
                     if (tic >= 0.5) { sm.Go(); t = false; tic = 0;  }
                     break;
+                case selects.supernova:
+                    anim3.Play("hit_bar_left_attack", 0);
+                    if (t) { tic += Time.deltaTime; }
+                    if (true) if (!t) { anim3.Play("none", 1); }
+                    if (e)
+                    {
+                        sm.hit2(get_dist);
+                        if (true)
+                        {
+                            if (true) t = true;
+
+                            anim3.Play("hit_bar_end", 1);
+                            anim2.Play("Kriss_shield2");
+                            ac.end_act_v2();
+
+                            if (true) t = true;
+
+
+
+                            Debug.Log(get_dist.gist());
+                        }
+
+                    }
+                    if (tic >= 0.5) { sm.Go(); t = false; tic = 0; }
+                    break;
                 case selects.act:
 
                     if (current == 0 && e)
                     {
                         sm.Check();
 
+                    }
+                    if (current == 1 && e && soul.tp > 100)
+                    {
+                        soul.tp = 0;
+                        if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+                        tpbar.size = (float)(tp) / 100;
+                        ac.Dodge();
+                        sm.Go();
+                    }
+                    if (current == 2 && e && soul.tp > 100)
+                    {
+                        soul.tp = 0;
+                        if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+                        tpbar.size = (float)(tp) / 100;
+                         sm.Do1(); 
+                        
+                    }
+                    if (current == 4 && e && soul.tp > 25)
+                    {
+                        soul.tp -= 25;
+                        if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+                        tpbar.size = (float)(tp) / 100;
+                        Settings.Player.Curent_Hero_healf = Settings.Player.Hero_healf;
+                        ac.end_act();
+                        sm.Go();
+                    }
+                    if (current == 5 && e)
+                    {
+                        tp = 101;
+                        tpbar.size = 1;
+                        txt.text = "owr";
                     }
 
                     break;
@@ -262,6 +322,10 @@ public class soul : MonoBehaviour
                     }
                     if (current == 1 && e)
                     {
+                        if (Hyper_Spamton_manager.current_hp_hs <= 0)
+                        {
+                            SceneManager.LoadScene("GameVin");
+                        }
                         ac.end_act();
                         sm.Go();
                     }
@@ -276,6 +340,7 @@ public class soul : MonoBehaviour
     void Start()
     {
         
+       
     }
 
     // Update is called once per frame

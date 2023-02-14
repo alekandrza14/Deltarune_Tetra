@@ -35,6 +35,10 @@ public class acts : MonoBehaviour
     {
         StartCoroutine(ExampleCoroutine2());
     }
+    public void Dodge()
+    {
+        current_attack_spamton++;
+    }
 
     public IEnumerator ExampleCoroutine()
     {
@@ -46,6 +50,7 @@ public class acts : MonoBehaviour
         tp.attacktpup();
         anim.SetBool("fight", fight);
         if (attacks_spamton_names.Length > current_attack_spamton) { attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1); }
+        if (attacks_spamton_names.Length - 1 < current_attack_spamton) { current_attack_spamton = 0; }
         anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
@@ -71,7 +76,8 @@ public class acts : MonoBehaviour
         anim.SetBool("fight", fight);
 
         if (attacks_spamton_names.Length > current_attack_spamton) { attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1); }
-        anim_panel.Play("hide");
+        if (attacks_spamton_names.Length-1 < current_attack_spamton) { current_attack_spamton = 0; }
+            anim_panel.Play("hide");
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(7f);
         current_attack_spamton++;

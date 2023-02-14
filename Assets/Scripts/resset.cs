@@ -11,4 +11,10 @@ public class resset : MonoBehaviour
         soul.tp = 0;
         SceneManager.LoadScene("Hyper_spamton_tutorial");
     }
+    public void Regame()
+    {
+        Settings.Player.Curent_Hero_healf = Settings.Player.Hero_healf;
+        soul.tp = 0;
+        SceneManager.LoadScene("menu");
+    }
 }
