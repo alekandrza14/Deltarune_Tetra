@@ -46,6 +46,10 @@ public class soul_Menager : MonoBehaviour
     }
     public void hit2(Getdistance i)
     {
+        if (Hyper_Spamton_manager.current_hp_hs <= 0)
+        {
+            Encoder.phase = 2;
+        }
         int d = (int)(i.gist() * 12);
         int da = (6000 - d);
         Debug.Log(da);
@@ -53,6 +57,8 @@ public class soul_Menager : MonoBehaviour
         Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
 
         Debug.Log(Hyper_Spamton_manager.current_hp_hs);
+
+
     }
     public void Go()
     {

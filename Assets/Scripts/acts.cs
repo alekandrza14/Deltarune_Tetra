@@ -15,6 +15,7 @@ public class acts : MonoBehaviour
     [SerializeField] Animator anim_panel;
     [SerializeField] Animator attacks_spamton;
     [SerializeField] string[] attacks_spamton_names;
+    [SerializeField] string[] attacks_phase2_spamton_names;
     [SerializeField] int current_attack_spamton;
     [SerializeField] soul_Menager sm;
     [SerializeField] soul tp;
@@ -74,7 +75,10 @@ public class acts : MonoBehaviour
 
         tp.attacktpup();
         anim.SetBool("fight", fight);
-
+        if (Encoder.phase ==3)
+        {
+            attacks_spamton_names = attacks_phase2_spamton_names;
+        }
         if (attacks_spamton_names.Length > current_attack_spamton) { attacks_spamton.Play(attacks_spamton_names[current_attack_spamton], 1); }
         if (attacks_spamton_names.Length-1 < current_attack_spamton) { current_attack_spamton = 0; }
             anim_panel.Play("hide");

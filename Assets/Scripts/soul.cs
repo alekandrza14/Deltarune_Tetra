@@ -26,7 +26,8 @@ public class soul : MonoBehaviour
     [SerializeField] Getdistance get_dist;
     [SerializeField] Scrollbar tpbar;
     [SerializeField] Text txt;
-   public static int tp =0;
+    public static int tp = 0;
+    public static int items = 19;
     int current;
     float tic = 0;
     bool t;
@@ -285,21 +286,19 @@ public class soul : MonoBehaviour
                         ac.end_act();
                         sm.Go();
                     }
-                    if (current == 5 && e)
-                    {
-                        tp = 101;
-                        tpbar.size = 1;
-                        txt.text = "owr";
-                    }
+                    
 
                     break;
                 case selects.item:
 
-                    if (e)
+                    if (e && items >= 0)
                     {
                         Settings.Player.Curent_Hero_healf = Settings.Player.Hero_healf;
                         ac.end_act();
                         sm.Go();
+                        items--;
+
+                        txt.text = "Items : " + items.ToString();
                     }
 
 
