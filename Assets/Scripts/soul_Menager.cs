@@ -43,6 +43,10 @@ public class soul_Menager : MonoBehaviour
         if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
         Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
         Debug.Log(Hyper_Spamton_manager.current_hp_hs);
+        if (Encoder.phase == 3 && Hyper_Spamton_manager.current_hp_hs <= 0)
+        {
+            SceneManager.LoadScene("GameVin");
+        }
     }
     public void hit2(Getdistance i)
     {
@@ -55,6 +59,29 @@ public class soul_Menager : MonoBehaviour
         Debug.Log(da);
         if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
         Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
+
+        Debug.Log(Hyper_Spamton_manager.current_hp_hs);
+        if (Encoder.phase == 3 && Hyper_Spamton_manager.current_hp_hs <= 0)
+        {
+            SceneManager.LoadScene("GameVin");
+        }
+
+    }
+    public void hit3(Getdistance i)
+    {
+        if (Hyper_Spamton_manager.current_hp_hs <= 0)
+        {
+            Encoder.phase = 2;
+        }
+        int d = (int)(i.gist() * 2);
+        int da = (2200 - d);
+        Debug.Log(da);
+        if (da > 0) Hyper_Spamton_manager.damege = da; else Hyper_Spamton_manager.damege = 0;
+        Hyper_Spamton_manager.current_hp_hs -= Hyper_Spamton_manager.damege;
+        if (Encoder.phase == 3 && Hyper_Spamton_manager.current_hp_hs <= 0)
+        {
+            SceneManager.LoadScene("GameVin");
+        }
 
         Debug.Log(Hyper_Spamton_manager.current_hp_hs);
 
@@ -104,6 +131,28 @@ public class soul_Menager : MonoBehaviour
         ac.reset();
         current = 6;
         select_act = selects.supernova;
+        foreach (GameObject i in act)
+        {
+
+            if (a == current)
+            {
+                i.SetActive(true);
+            }
+            else
+            {
+                i.SetActive(false);
+            }
+            a++;
+
+        }
+    }
+    public void Do2()
+    {
+        ac.strings_dialog = strings_dialog_1;
+        int a = 0;
+        ac.reset();
+        current = 7;
+        select_act = selects.X_sphesh;
         foreach (GameObject i in act)
         {
 

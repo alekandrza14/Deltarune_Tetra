@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Unity.Mathematics.math;
 
 // ****************** Player Collision Detection through Raymarching ****************** 
@@ -19,7 +20,7 @@ namespace Unity.Mathematics
 
         private DistanceFunctions Df;
         private RaymarchCam camScript;
-
+        public Heart_hero hh;
 
         // Start is called before the first frame update
         void Start()
@@ -124,6 +125,7 @@ namespace Unity.Mathematics
 
             for (int i = 0; i < ro.Length; i++)
             {
+                
                 Vector3 p = ro[i].position;
                 //check hit
                 float d = DistanceField(p);
@@ -131,10 +133,32 @@ namespace Unity.Mathematics
 
                 if (d < 0) //hit
                 {
+                    Rigidbody r = hh.GetComponent<Rigidbody>();
+                    if (hh.ac)
+                    {
+                        if (hh.ac.fight && !r.isKinematic   && !hh.rig )
+                        {
+                            Settings.Player.Curent_Hero_healf -= 25;
+                            if (Settings.Player.Curent_Hero_healf <= 0) { SceneManager.LoadScene("GameOwer"); }
+                            StartCoroutine(hh.RIG());
+                            if (!hh.demo)
+                            {
+                                hh.tp.text = soul.tp.ToString();
+                                if (soul.tp < 100 - 1) soul.tp += 1; else { soul.tp += 1; }
+                                if (soul.tp < 100) hh.tp.text = soul.tp.ToString(); else { hh.tp.text = "owr"; }
+                            }
+                        }
+                    }
+                    if (hh.demo)
+                    {
+
+                        SceneManager.LoadScene("GameOwer");
+                    }
+                          
                     Debug.Log("hit" + i);
                     nrHits++;
                     //collision
-                    transform.Translate(ro[i].forward * d * 1.5f, Space.World);
+                    transform.Translate(ro[i].forward * d * 1.0f, Space.World);
 
                 }
 
@@ -146,12 +170,11 @@ namespace Unity.Mathematics
         void MoveToGround()
         {
             Vector3 p = transform.position;
-           //check hit
-
+            //check hit
             float d = DistanceField(p);
             d = Mathf.Min(d, maxDownMovement);
             //Debug.Log(d);
-            transform.Translate(Vector3.down * d, Space.World);
+           // transform.Translate(Vector3.down * d, Space.World);
         }
 
     }

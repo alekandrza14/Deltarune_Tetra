@@ -77,7 +77,7 @@ public class dialog_menager : MonoBehaviour
                     gameObject.SetActive(false);
                     if (end)
                     {
-                        SceneManager.LoadScene("Hyper_spamton_tutorial");
+                        SceneManager.LoadScene("mini_tutorial");
                     }
                     z = 0;
                 }
@@ -91,7 +91,7 @@ public class dialog_menager : MonoBehaviour
                     gameObject.SetActive(false);
                     if (end)
                     {
-                        SceneManager.LoadScene("Hyper_spamton_tutorial");
+                        SceneManager.LoadScene("mini_tutorial");
                     }
                     z = 0;
 
@@ -142,7 +142,7 @@ public class dialog_menager : MonoBehaviour
             end = true;
             act = false;
             current_string = -1;
-            if (acting == acting.start_fight) SceneManager.LoadScene("Hyper_spamton_tutorial");
+            if (acting == acting.start_fight) SceneManager.LoadScene("mini_tutorial");
             if (!unsig) anim.Play("sig");
             gameObject.SetActive(false);
             return false;

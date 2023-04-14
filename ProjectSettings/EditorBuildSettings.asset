@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/game.unity
     guid: b6748997d687afd47a9c75d3a5b6daaa
   - enabled: 1
-    path: Assets/Scenes/Hyper_spamton_tutorial.unity
+    path: Assets/Scenes/Hyper_spamton.unity
     guid: 8492092be7f345543bf169808759191d
   - enabled: 1
     path: Assets/Scenes/GameOwer.unity
@@ -20,4 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameVin.unity
     guid: 22373ce63187dd440b049e89c33ba340
+  - enabled: 1
+    path: Assets/Scenes/mini_tutorial.unity
+    guid: 8c8cc2b550b3d084e8820646a371096d
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

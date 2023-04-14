@@ -43,6 +43,7 @@ public class acts : MonoBehaviour
 
     public IEnumerator ExampleCoroutine()
     {
+        anim.SetInteger("phase", Encoder.phase);
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         yield return new WaitForSeconds(0.5f);
@@ -67,6 +68,7 @@ public class acts : MonoBehaviour
     }
     public IEnumerator ExampleCoroutine2()
     {
+        anim.SetInteger("phase", Encoder.phase);
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum selects
 {
-    menu, enemyes, item, act, shild, spare, none, attack, supernova
+    menu, enemyes, item, act, shild, spare, none, attack, supernova, X_sphesh
 }
 
 public class soul : MonoBehaviour
@@ -31,6 +31,7 @@ public class soul : MonoBehaviour
     int current;
     float tic = 0;
     bool t;
+    bool t2;
     public void attacktpup()
     {
         
@@ -168,10 +169,11 @@ public class soul : MonoBehaviour
         bool e = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return);
         if (select_type == selects.menu)
         {
-            if (current == 0 && e)
+            if (current == 0 && e && !t2)
             {
-                StartCoroutine(ExampleCoroutine());
 
+                StartCoroutine(ExampleCoroutine());
+                t2 = true;
             }
             if (current == 1 && e)
             {
@@ -254,6 +256,31 @@ public class soul : MonoBehaviour
                     }
                     if (tic >= 0.5) { sm.Go(); t = false; tic = 0; }
                     break;
+                case selects.X_sphesh:
+                    anim3.Play("hit_bar_left_attack", 0);
+                    if (t) { tic += Time.deltaTime; }
+                    if (true) if (!t) { anim3.Play("none", 1); }
+                    if (e)
+                    {
+                        sm.hit3(get_dist);
+                        if (true)
+                        {
+                            if (true) t = true;
+
+                            anim3.Play("hit_bar_end", 1);
+                            anim2.Play("Kriss&Susie_attack");
+                            ac.end_act_v2();
+
+                            if (true) t = true;
+
+
+
+                            Debug.Log(get_dist.gist());
+                        }
+
+                    }
+                    if (tic >= 0.5) { sm.Go(); t = false; tic = 0; }
+                    break;
                 case selects.act:
 
                     if (current == 0 && e)
@@ -274,9 +301,18 @@ public class soul : MonoBehaviour
                         soul.tp = 0;
                         if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
                         tpbar.size = (float)(tp) / 100;
-                         sm.Do1(); 
-                        
+                        sm.Do1();
+
                     }
+                    if (current == 3 && e && soul.tp > 44)
+                    {
+                        soul.tp -= 45;
+                        if (tp != 100) txt.text = tp.ToString(); else { txt.text = "max"; }
+                        tpbar.size = (float)(tp) / 100;
+                        sm.Do2();
+
+                    }
+
                     if (current == 4 && e && soul.tp > 25)
                     {
                         soul.tp -= 25;
