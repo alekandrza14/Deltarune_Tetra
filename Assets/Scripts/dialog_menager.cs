@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public enum acting
 {
-    start_fight,none
+    start_fight,none,novella
 }
 
 public class dialog_menager : MonoBehaviour
@@ -15,6 +15,7 @@ public class dialog_menager : MonoBehaviour
     [SerializeField] public string[] strings_dialog;
 
     [SerializeField] Animator anim;
+    [SerializeField] string[] anims;
     [SerializeField] bool unsig;
     [SerializeField] acting acting;
     string log;
@@ -77,7 +78,7 @@ public class dialog_menager : MonoBehaviour
                     gameObject.SetActive(false);
                     if (end)
                     {
-                        SceneManager.LoadScene("mini_tutorial");
+                        if (acting == acting.start_fight) SceneManager.LoadScene("mini_tutorial");
                     }
                     z = 0;
                 }
@@ -91,7 +92,7 @@ public class dialog_menager : MonoBehaviour
                     gameObject.SetActive(false);
                     if (end)
                     {
-                        SceneManager.LoadScene("mini_tutorial");
+                        if (acting == acting.start_fight) SceneManager.LoadScene("mini_tutorial");
                     }
                     z = 0;
 
@@ -114,10 +115,10 @@ public class dialog_menager : MonoBehaviour
                 txt.text = log;
             }
         }
-        else if(acting == acting.none)
+        else if (acting == acting.none)
         {
             txt.text = log;
-            tic += 1f /(30f / speed);
+            tic += 1f / (30f / speed);
             if (tic > 0.1 && !end)
             {
 
@@ -132,6 +133,88 @@ public class dialog_menager : MonoBehaviour
                 tic = 0;
             }
         }
+        else if (acting == acting.novella)
+        {
+            if (!act && e)
+            {
+                act = !act;
+                log = "";
+                z = 0;
+                anim.Play(anims[current_string]);
+            }
+            if (e)
+            {
+                z++;
+            }
+            if (z >= 2)
+            {
+
+                if (current_string < strings_dialog.Length - 1)
+                {
+                    // anim.Play("cutscene_end");
+
+                    
+                        current_string++;
+                    act = false;
+                    a = 0;
+                   
+                    z = 0;
+                }
+                else if (current_string == strings_dialog.Length - 1)
+                {
+                    // anim.Play("cutscene_end");
+
+                    Debug.Log("end");
+                    end = true;
+                    act = false;
+                    current_string = -1;
+                 //   if (!unsig) 
+                    gameObject.SetActive(false);
+
+                    if (end)
+                    {
+
+                       SceneManager.LoadScene("menu");
+                    }
+
+                    z = 0;
+                }
+                else if (current_string > strings_dialog.Length - 1)
+                {
+                    Debug.Log("end");
+                    end = true;
+                    act = false;
+                    current_string = -1;
+                   // if (!unsig) 
+                    gameObject.SetActive(false);
+                    if (end)
+                    {
+
+                         SceneManager.LoadScene("menu");
+                    }
+
+
+                    z = 0;
+
+                }
+            }
+
+
+
+            if (true) if (act)
+                {
+                    actor();
+                    // StartCoroutine(DialogCoroutine());
+                }
+            if (m)
+            {
+                log = strings_dialog[current_string];
+                //  current_string++;
+                a = strings_dialog[current_string].Length;
+                act = false;
+                txt.text = log;
+            }
+        }
 
     }
     bool ifer()
@@ -143,6 +226,7 @@ public class dialog_menager : MonoBehaviour
             act = false;
             current_string = -1;
             if (acting == acting.start_fight) SceneManager.LoadScene("mini_tutorial");
+            if (acting == acting.novella) SceneManager.LoadScene("menu");
             if (!unsig) anim.Play("sig");
             gameObject.SetActive(false);
             return false;
@@ -160,7 +244,11 @@ public class dialog_menager : MonoBehaviour
     void actor()
     {
         txt.text = log;
-        tic += 1f / (30f/ speed);
+        if (acting != acting.novella) { tic += 1f / (30f / speed); } 
+        else if (acting == acting.novella)
+        {
+            tic += 1f / (5f / speed);
+        }
         if (tic > 0.1 && !end)
         {
 

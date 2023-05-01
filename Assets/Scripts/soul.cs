@@ -99,12 +99,12 @@ public class soul : MonoBehaviour
     {
         //Print the time of when the function is first called.
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        
 
 
-            Instantiate(click);
-            anim.Play("Spamton_out");
-        
+
+        Instantiate(click);
+        anim.Play("Spamton_out");
+
         //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(3f);
 
@@ -112,7 +112,26 @@ public class soul : MonoBehaviour
 
         //After we have waited 5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);
-        
+
+    }
+    IEnumerator ExampleCoroutine3()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+
+
+        Instantiate(click);
+        anim.Play("Spamton_out");
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(3f);
+
+        SceneManager.LoadScene("story_HS_1");
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+
     }
     void InputKey()
     {
@@ -175,7 +194,13 @@ public class soul : MonoBehaviour
                 StartCoroutine(ExampleCoroutine());
                 t2 = true;
             }
-            if (current == 1 && e)
+            if (current == 1 && e && !t2)
+            {
+
+                StartCoroutine(ExampleCoroutine3());
+                t2 = true;
+            }
+            if (current == 2 && e)
             {
                 Application.Quit();
             }
@@ -190,11 +215,16 @@ public class soul : MonoBehaviour
                     StartCoroutine(ExampleCoroutine());
 
                 }
-                if (current == 1 && e)
-                {
-                    Application.Quit();
-                }
-                break;
+                    if (current == 1 && e)
+                    {
+
+                        StartCoroutine(ExampleCoroutine3());
+                    }
+                    if (current == 2 && e)
+                    {
+                        Application.Quit();
+                    }
+                    break;
 
                 case selects.enemyes:
 
